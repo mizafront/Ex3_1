@@ -11,9 +11,9 @@ fun main() {
 
     val purchase = countItem * 100 * 100
 
-    if (previousPurchase > 10_001){
+    if (previousPurchase > 10_000){
         discountedAmount = (purchase - (purchase * 0.05)).toInt()
-    }else if (previousPurchase > 1_001){
+    }else if (previousPurchase > 1_000){
         discountedAmount = purchase - 100
     }else {
         discountedAmount = purchase
