@@ -1,15 +1,15 @@
 fun main() {
-    val previousPurchase = 400
+    val previousPurchase = 20000
     var discountedAmount : Int
     println(""" 
-        Цена за покупку музыки 250р
+        Цена за покупку музыки 100р
         Сколько собираетесь купить?
     """.trimIndent())
     val countItem = readLine()!!.toInt()
     println("Вы постоянный клиент?")
     val vipPeople = readLine()
 
-    val purchase = countItem * 250 * 100
+    val purchase = countItem * 100 * 100
 
     if (previousPurchase > 10_001){
         discountedAmount = (purchase - (purchase * 0.05)).toInt()
@@ -23,5 +23,5 @@ fun main() {
         discountedAmount = (discountedAmount - (discountedAmount * 0.01)).toInt()
     }
 
-    println("Цена покупки ${discountedAmount / 100 } р.")
+    println("Цена покупки ${discountedAmount / 100 } рубля ${discountedAmount % 100 } копеек")
 }
